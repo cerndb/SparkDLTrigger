@@ -4,7 +4,7 @@ This folder contains code used for training the Inclusive Classifier with tf.ker
 It is intended to be used together with the tool [tf-spawner](https://github.com/cerndb/tf-spawner)
 Model training scripts and files:
 - `4.3a_InclusiveClassifier_WorkerCode_tuned_cached_learningAdaptive.py`
-- `4.3a_InclusiveClassifier_WorkerCode_tuned_NOcached_learningAdaptive.py` (this version does not cache the dataset, use when not enough memory is available)
+- `4.3a_InclusiveClassifier_WorkerCode_tuned_NOcached_learningAdaptive.py` (this version does not cache the training dataset, use when not enough memory is available for caching)
 - `4.3a_InclusiveClassifier_WorkerCode_tuned_cached_shuffle_learningAdaptive.py` (this version adds shuffling of the training dataset at each epoch)
 - `pod-cpu.yaml` and `pod-gpu.yaml`: these are used by tf-spawner (see exmaple below) 
 
