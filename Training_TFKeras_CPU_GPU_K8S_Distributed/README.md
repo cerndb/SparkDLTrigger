@@ -6,6 +6,7 @@ Model training scripts and files:
 - `4.3a_InclusiveClassifier_WorkerCode_tuned_cached_learningAdaptive.py`
 - `4.3a_InclusiveClassifier_WorkerCode_tuned_NOcached_learningAdaptive.py` (this version does not cache the training dataset, use when not enough memory is available for caching)
 - `4.3a_InclusiveClassifier_WorkerCode_tuned_cached_shuffle_learningAdaptive.py` (this version adds shuffling of the training dataset at each epoch)
+- `4.3a_InclusiveClassifier_WorkerCode_tuned_cached_learningAdaptive_LSTM.py` (this version uses an LSTM layer instead of GRU: it works faster on GPU with recent TF versions)
 - `pod-cpu.yaml` and `pod-gpu.yaml`: these are used by tf-spawner (see exmaple below) 
 
 **How to use:**
