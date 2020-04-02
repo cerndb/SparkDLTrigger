@@ -1,8 +1,10 @@
 # SparkDLTrigger
 
-This repository contains the code, notebooks, and links to the datasets accompanying:
+This repository contains code, notebooks, and links to the datasets accompanying
 - The article [Machine Learning Pipelines with Modern Big DataTools for High Energy Physics](https://arxiv.org/abs/1909.10389)
-- The blog entry [Machine Learning Pipelines for High Energy Physics Using Apache Spark with BigDL and Analytics Zoo](https://db-blog.web.cern.ch/blog/luca-canali/machine-learning-pipelines-high-energy-physics-using-apache-spark-bigdl)    
+- Blog entries:
+  - [Machine Learning Pipelines for High Energy Physics Using Apache Spark with BigDL and Analytics Zoo](https://db-blog.web.cern.ch/blog/luca-canali/machine-learning-pipelines-high-energy-physics-using-apache-spark-bigdl)    
+  - [Distributed Deep Learning for Physics with TensorFlow and Kubernetes](https://db-blog.web.cern.ch/blog/luca-canali/2020-03-distributed-deep-learning-physics-tensorflow-and-kubernetes)
 
 Authors and credits:  
 - Principal author of the notebooks: Matteo.Migliorini@cern.ch  
