@@ -115,8 +115,8 @@ def scheduler(epoch):
   else:
     return 0.0001 * strategy.num_replicas_in_sync
 
-#callbacks = [ tf.keras.callbacks.TensorBoard(log_dir='./logs', histogram_freq=1, profile_batch = 3)]#, cb ]
-callbacks = []
+#Add this for TensorBoard
+#callbacks = [tf.keras.callbacks.TensorBoard(log_dir='./logs', profile_batch = 0)]
 callbacks = [tf.keras.callbacks.LearningRateScheduler(scheduler)]
     
 print('starting at ', time())

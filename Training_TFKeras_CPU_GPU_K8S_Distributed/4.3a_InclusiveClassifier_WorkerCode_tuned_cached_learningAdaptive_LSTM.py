@@ -3,7 +3,7 @@
 # tf.keras with tf.distribute for the Inclusive Classifier model
 # Intended to be used with tf-spawner: https://github.com/cerndb/tf-spawner
 #
-# tested with TensorFlow 2.0.1 and 2.0.1-gpu
+# tested with TensorFlow 2.0.1, 2.0.1-gpu, 2.1.0-gpu
 #########
 
 ########################
@@ -115,8 +115,8 @@ def scheduler(epoch):
   else:
     return 0.0001 * strategy.num_replicas_in_sync
 
-#callbacks = [ tf.keras.callbacks.TensorBoard(log_dir='./logs', histogram_freq=1, profile_batch = 3)]#, cb ]
-callbacks = []
+#Add this for TensorBoard
+#callbacks = [tf.keras.callbacks.TensorBoard(log_dir='./logs', profile_batch = 0)]
 callbacks = [tf.keras.callbacks.LearningRateScheduler(scheduler)]
     
 print('starting at ', time())
