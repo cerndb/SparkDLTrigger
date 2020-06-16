@@ -1,26 +1,27 @@
 # SparkDLTrigger
+This repository contains code, notebooks, and datasets accompanying published work on the implementation
+of a data and ML pipeline to build a particle classifier.
 
-This repository contains code, notebooks, and links to the datasets accompanying
-- The article [Machine Learning Pipelines with Modern Big DataTools for High Energy Physics](https://arxiv.org/abs/1909.10389)
-- Blog entries:
+## Published work
+- [Machine Learning Pipelines with Modern Big DataTools for High Energy Physics](https://rdcu.be/b4Wk9)
+ *Comput Softw Big Sci* **4**, 8 (2020).
+- Related blog entries:
   - [Machine Learning Pipelines for High Energy Physics Using Apache Spark with BigDL and Analytics Zoo](https://db-blog.web.cern.ch/blog/luca-canali/machine-learning-pipelines-high-energy-physics-using-apache-spark-bigdl)    
   - [Distributed Deep Learning for Physics with TensorFlow and Kubernetes](https://db-blog.web.cern.ch/blog/luca-canali/2020-03-distributed-deep-learning-physics-tensorflow-and-kubernetes)
 
-Authors and credits:  
-- Authors and contacts: Luca.Canali@cern.ch; Riccardo.Castellotti@cern.ch; Matteo.Migliorini@cern.ch  
+## Authors  
+- Authors and contacts: Matteo.Migliorini@cern.ch, Riccardo.Castellotti@cern.ch, Luca.Canali@cern.ch    
 - Original research article, raw data and neural network models by: [T.Q. Nguyen *et al.*, Comput Softw Big Sci (2019) 3: 12](https://link.springer.com/epdf/10.1007/s41781-019-0028-1?author_access_token=eTrqfrCuFIP2vF4nDLnFfPe4RwlQNchNByi7wbcMAY7NPT1w8XxcX1ECT83E92HWx9dJzh9T9_y5Vfi9oc80ZXe7hp7PAj21GjdEF2hlNWXYAkFiNn--k5gFtNRj6avm0UukUt9M9hAH_j4UR7eR-g%3D%3D)   
-- Acknowledgements: Viktor Khristenko, Thong Nguyen, Maurizio Pierini, Maria Girone, Marco Zanetti, 
+- Acknowledgements: Marco Zanetti, Thong Nguyen, Maurizio Pierini, Viktor Khristenko, CERN openlab, 
 members of the Hadoop and Spark service at CERN, CMS Bigdata project,
 Intel team for BigDL and Analytics Zoo consultancy: Jiao (Jennie) Wang and Sajan Govindan.
 
 ## Data
-Data and code to reproduce this work are made available via this repository.
 - The datasets used for this work can be [downloaded from this link](Data).
 
-## Tools
-[TF-Spawner](https://github.com/cerndb/tf-spawner): As part of this work we have developed
-[TF-Spawner](https://github.com/cerndb/tf-spawner), a tool for distributed training with TensorFlow using
-cloud resources (CPU and GPU). 
+## TF-Spawner
+- [TF-Spawner](https://github.com/cerndb/tf-spawner), a custom tool we have developed for distributed training with TensorFlow using
+cloud resources (CPU and GPU nodes). 
 
 ## Notebooks and Python code
 - Notebooks with [data preparation code using Apache Spark](DataIngestion_FeaturePreparation)
