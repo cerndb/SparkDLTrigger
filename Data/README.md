@@ -1,11 +1,11 @@
 # Data
 
-This directory contains links to download the datasets used by
-["Machine Learning Pipelines with Modern Big Data Tools for High Energy Physics"](https://arxiv.org/abs/1909.10389), with a short description.  
+This directory contains links to download the datasets used in this repository, supporting the article
+["Machine Learning Pipelines with Modern Big Data Tools for High Energy Physics"](https://rdcu.be/b4Wk9).  
 For the largest datasets (raw data and the output of first step of pre-processing) we have currently uploaded
 only representative samples. The full dataset is expected to be made available using CERN Open Data at a later date.
 Datasets are made available under the terms of the CC0 waiver.   
-Credits: for the original (rawData) dataset to [T.Q.Nguyen *et al.*](https://arxiv.org/abs/1807.0008).  
+Credits for the original (rawData) dataset to the authors of [Topology classification with deep learning to improve real-time event selection at the LHC](https://link.springer.com/epdf/10.1007/s41781-019-0028-1?author_access_token=eTrqfrCuFIP2vF4nDLnFfPe4RwlQNchNByi7wbcMAY7NPT1w8XxcX1ECT83E92HWx9dJzh9T9_y5Vfi9oc80ZXe7hp7PAj21GjdEF2hlNWXYAkFiNn--k5gFtNRj6avm0UukUt9M9hAH_j4UR7eR-g%3D%3D).  
 Datasets for Machine Learning, available in Apache Parquet and TFRecord formats have been produced using the notebooks published in this repository.  
 Note: If you have access to CERN computing resources, you can contact the authors to get
 more information on where to find the full datasets, that are available both on the Hadoop platform and on CERN EOS storage.
@@ -17,6 +17,7 @@ This technique can be used to download full data directories (tested on Linux):
 DATASET_NAME="testUndersampled_HLF_features.parquet"
 #DATASET_NAME="testUndersampled.parquet"
 #DATASET_NAME="testUndersampled.tfrecord"
+
 wget -r -np -R "index.html*" -e robots=off http://sparkdltrigger.web.cern.ch/sparkdltrigger/$DATASET_NAME
 
 DATASET_NAME="trainUndersampled_HLF_features.parquet"
