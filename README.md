@@ -1,9 +1,9 @@
 # SparkDLTrigger
 This repository contains code, notebooks, and datasets accompanying published work on the implementation
-of a data and ML pipeline to build a particle classifier.
+of a ML pipeline for a particle classifier.
 
 ## Published work
-- [Machine Learning Pipelines with Modern Big DataTools for High Energy Physics](https://rdcu.be/b4Wk9)
+- [Machine Learning Pipelines with Modern Big Data Tools for High Energy Physics](https://rdcu.be/b4Wk9)
  *Comput Softw Big Sci* **4**, 8 (2020).
 - Related blog entries:
   - [Machine Learning Pipelines for High Energy Physics Using Apache Spark with BigDL and Analytics Zoo](https://db-blog.web.cern.ch/blog/luca-canali/machine-learning-pipelines-high-energy-physics-using-apache-spark-bigdl)    
@@ -62,8 +62,11 @@ The results of the DL model(s) training are satisfactoy and match the results of
 ![Loss converging, ROC and AUC](Docs/Loss_ROC_AUC.png)
 
 ## Additional Info and References
-- [Article "Machine Learning Pipelines with Modern Big DataTools for High Energy Physics"](https://arxiv.org/abs/1909.10389)
+- [Article "Machine Learning Pipelines with Modern Big DataTools for High Energy Physics"](https://rdcu.be/b4Wk9) *Comput Softw Big Sci* **4**, 8 (2020), and [arXiv.org](https://arxiv.org/abs/1909.10389)
 - [Blog post "Machine Learning Pipelines for High Energy Physics Using Apache Spark with BigDL and Analytics Zoo"](https://db-blog.web.cern.ch/blog/luca-canali/machine-learning-pipelines-high-energy-physics-using-apache-spark-bigdl)
+- [Blog post "Distributed Deep Learning for Physics with TensorFlow and Kubernetes"](https://db-blog.web.cern.ch/blog/luca-canali/2020-03-distributed-deep-learning-physics-tensorflow-and-kubernetes)
 - [Poster at the CERN openlab technical workshop 2019](Docs/Poster.pdf)  
 - [Presentation at Spark Summit SF 2019](https://databricks.com/session/deep-learning-on-apache-spark-at-cerns-large-hadron-collider-with-intel-technologies)  
+- [Presentation at Spark Summit EU 2019](https://databricks.com/session_eu19/deep-learning-pipelines-for-high-energy-physics-using-apache-spark-with-distributed-keras-on-analytics-zoo)
 - [Presentation at CERN EP-IT Data science seminar](https://indico.cern.ch/event/859119/)
+
