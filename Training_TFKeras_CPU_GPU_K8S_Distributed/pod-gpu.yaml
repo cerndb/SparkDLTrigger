@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: PODNAME
+  labels:
+    app: APPNAME
+    training_attempt: ATTEMPT
+spec:
+  containers:
+    - name: tensorflow
+      resources:
+        requests:
+          memory: "30Gi"
+          cpu: "4000m"
+        limits:
+          nvidia.com/gpu: "1"
+      env:
+      volumeMounts:
+      - name: script
+        mountPath: /script
+      command:  ['python', '/script/training-script.py' ]
+  volumes:
+    - name: script
+      configMap:
+        name: script
+  restartPolicy: Never
