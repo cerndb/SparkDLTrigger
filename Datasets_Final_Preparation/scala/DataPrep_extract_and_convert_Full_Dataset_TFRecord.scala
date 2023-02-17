@@ -8,9 +8,13 @@
 // This is used as input for the TensorFlow Keras with TFRecord example notebook
 // Run with Scala shell or in a Scala notebook
 
-// Command line used to run this (Aug 2019):
-// Note, it's also possible to use yarn or k8s to scale out
-bin/spark-shell --master local[*] --driver-memory 32g --packages org.tensorflow:spark-tensorflow-connector_2.11:1.14.0
+// Spark 3.x and Scala 2.12
+// Note, consider using YARN or K8S to scale out
+JAR=http://canali.web.cern.ch/res/spark-tensorflow-connector_2.12-1.11.0.jar
+bin/spark-shell --master local[*] --driver-memory 20g --jars $JAR
+
+// spark 2.4.8 and scala 2.11
+// bin/spark-shell --master local[*] --driver-memory 20g --packages org.tensorflow:spark-tensorflow-connector_2.11:1.14.0
 
 // UDF to convert Vectors to Arrays
 // This is needed as TFRecord cannot handle Vector Type, but can save Arrays
@@ -62,5 +66,3 @@ df2.coalesce(numPartitions).
 selectExpr("toArray(HLF_input) as HLF_input", "flatten(GRU_input) as GRU_input", "toArray(encoded_label) as encoded_label")
 .write.format("tfrecords")
 .save(outputPath+"trainUndersampled.tfrecord")
-
-

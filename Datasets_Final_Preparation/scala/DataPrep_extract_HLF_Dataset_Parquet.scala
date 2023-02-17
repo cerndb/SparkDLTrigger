@@ -5,11 +5,8 @@
 // This is used as input for the TensorFlow and Petastorm example notebooks
 // Run with Scala shell or in a Scala notebook
 
-// Credits: the core idea of this recipe comes mostly from
-// https://docs.azuredatabricks.net/applications/deep-learning/data-prep/petastorm.html
-
 // Define a UDF to transform Vectors in Arrays
-// This is because we need Array for the Petastorm exmaple notebook
+// This is because we need Array for the Petastorm example notebook
 
 import org.apache.spark.ml.linalg.Vector
 val toArray = udf { v: Vector => v.toArray }
@@ -37,10 +34,10 @@ df.selectExpr("toArray(HLF_input) as HLF_input", "toArray(encoded_label) as enco
   coalesce(1).
   write.  
   option("parquet.block.size", 1024 * 1024).  
-  parquet(outputPATH + "testUndersampled_HLF_featuresi.parquet")
+  parquet(outputPATH + "testUndersampled_HLF_features.parquet")
 
 //
-// repeat for the training dataset
+// Repeat for the training dataset
 //
 
 val df2=spark.read.parquet(PATH + "trainUndersampled.parquet")
@@ -49,4 +46,3 @@ df2.selectExpr("toArray(HLF_input) as HLF_input", "toArray(encoded_label) as enc
   coalesce(4).write.
   option("parquet.block.size", 1024 * 1024).
   parquet(outputPATH + "trainUndersampled_HLF_features.parquet")
-

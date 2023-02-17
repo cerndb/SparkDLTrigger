@@ -6,9 +6,13 @@
 // This is used as input for the TensorFlow Keras with TFRecord example notebook
 // Run with Scala shell or in a Scala notebook
 
-// Commnad line used to run this (June 2019, updated Aug 2019):
+// Spark 3.x and Scala 2.12
+// Note, consider using YARN or K8S to scale out
+JAR=http://canali.web.cern.ch/res/spark-tensorflow-connector_2.12-1.11.0.jar
+  bin/spark-shell --master local[*] --driver-memory 20g --jars $JAR
 
-bin/spark-shell --master local[*] --packages org.tensorflow:spark-tensorflow-connector_2.11:1.14.0
+// spark 2.4.8 and scala 2.11
+// bin/spark-shell --master local[*] --driver-memory 20g --packages org.tensorflow:spark-tensorflow-connector_2.11:1.14.0
 
 // Data source
 
@@ -37,4 +41,3 @@ val df2=spark.read.parquet(PATH + "trainUndersampled_HLF_features.parquet")
 // save the training dataset in TFRecord format
 // compact output in 4 files with coalesce(4)
 df2.coalesce(4).write.format("tfrecords").save(outputPATH + "trainUndersampled_HLF_features.tfrecord")
-
