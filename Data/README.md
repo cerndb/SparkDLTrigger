@@ -13,7 +13,7 @@ DATASET_NAME="testUndersampled_HLF_features.parquet"
 #DATASET_NAME="testUndersampled_InclusiveClassifier.tfrecord"
 #DATASET_NAME="testUndersampled.parquet"
 
-wget -r -np -R "index.html*" -e robots=off http://sparkdltrigger.web.cern.ch/sparkdltrigger/$DATASET_NAME
+wget -r -np -nH -R "index.html*" -e robots=off http://sparkdltrigger.web.cern.ch/sparkdltrigger/$DATASET_NAME
 
 # Download the corresponding training data sets
 DATASET_NAME="trainUndersampled_HLF_features.parquet"
@@ -22,7 +22,7 @@ DATASET_NAME="trainUndersampled_HLF_features.parquet"
 #DATASET_NAME="trainUndersampled_InclusiveClassifier.tfrecord"
 #DATASET_NAME="trainUndersampled.parquet"
 
-wget -r -np -R "index.html*" -e robots=off http://sparkdltrigger.web.cern.ch/sparkdltrigger/$DATASET_NAME
+wget -r -np -nH -R "index.html*" -e robots=off http://sparkdltrigger.web.cern.ch/sparkdltrigger/$DATASET_NAME
 ```
 
 ## Notes
@@ -87,7 +87,7 @@ Schema:
     - 132 GB: [trainUndersampled_InclusiveClassifier.parquet](http://sparkdltrigger.web.cern.ch/sparkdltrigger/trainUndersampled_InclusiveClassifier.parquet)
     - 32 GB:  [testUndersampled_InclusiveClassifier.parquet](http://sparkdltrigger.web.cern.ch/sparkdltrigger/testUndersampled_InclusiveClassifier.parquet)
 
-### Low Level Features  in TFRecord format 
+### Low Level Features in TFRecord format 
   - Note, this dataset is derived by the full datasets in Parquet.
     It contains the same number of rows as the Parquet dataset, but only 3 fields, as needed 
     by the Inclusive classifier with Tensorflow: HLF_input, GRU_input and encoded_labels.
