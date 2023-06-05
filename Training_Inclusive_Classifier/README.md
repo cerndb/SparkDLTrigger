@@ -15,10 +15,17 @@ The notebooks provided in this directory demonstrate various techniques and appr
 the Inclusive Classifier. They cover the following scenarios:
 
 - **[Data in TFRecord, TensorFlow on GPU, GRU-based model](TensorFlow_Inclusive_Classifier_GRU_TFRecord.ipynb)**
-  - Description: This notebook showcases the training process using data stored in TFRecord format. TensorFlow is configured to run on a GPU, and a GRU-based model architecture is employed.
+  - Description: This notebook showcases the training process using data stored in TFRecord format.
+  - TensorFlow is configured to run on a GPU, and a GRU-based model architecture is employed.
 
 - **[Data in Parquet read with Petastorm, TensorFlow on GPU, GRU-based model](TensorFlow_Inclusive_Classifier_GRU_TFRecord.ipynb)**
-   - Description: This notebook explores the usage of Parquet data, read with Petastorm, for training. TensorFlow is configured to run on a GPU, and a GRU-based model architecture is utilized.
+   - Description: This notebook explores the usage of Parquet data, read with Petastorm, for training.
+   - TensorFlow is configured to run on a GPU, and a GRU-based model architecture is utilized.
 
 - **[Data in TFRecord, TensorFlow on GPU, LSTM-based model](TensorFlow_Inclusive_Classifier_LSTM_TFRecord.ipynb)**
-   - Description: This notebook focuses on training with data stored in TFRecord format. TensorFlow is configured to run on a GPU, and an LSTM-based model architecture is employed.
+   - Description: This notebook focuses on training with data stored in TFRecord format. 
+   - TensorFlow is configured to run on a GPU, and an LSTM-based model architecture is employed.
+
+- **[Data in TFRecord, TensorFlow on GPU, Transformer-based model](TensorFlow_Inclusive_Classifier_Transformer_TFRecord.ipynb)**
+  - Description: This notebook focuses on training with data stored in TFRecord format.
+  - TensorFlow is configured to run on a GPU, and a Transformer-based model architecture is employed.
