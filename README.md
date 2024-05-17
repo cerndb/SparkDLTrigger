@@ -1,7 +1,8 @@
 # SparkDLTrigger - Particle Classifier using Deep Learning and Spark
-Welcome to the SparkDLTrigger repository! This project focuses on building a machine learning pipeline for 
-a high-energy physics particle classifier using Apache Spark, ROOT, Parquet, TensorFlow, and Jupyter with 
-Python notebooks.
+Welcome to the SparkDLTrigger repository!  
+This project is about building a machine learning pipeline for 
+a high-energy physics particle classifier using mainstream tools and techniques from open source
+for ML and Data Engineering.
 
 [![SWAN](https://swan.web.cern.ch/sites/swan.web.cern.ch/files/pictures/open_in_swan.svg)](https://swan-k8s.cern.ch/user-redirect/download?projurl=https://github.com/cerndb/SparkDLTrigger.git)
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cerndb/SparkDLTrigger)
@@ -15,20 +16,25 @@ This project is supported by several articles and presentations that provide fur
   - [Machine Learning Pipelines for High Energy Physics Using Apache Spark with BigDL and Analytics Zoo](https://db-blog.web.cern.ch/blog/luca-canali/machine-learning-pipelines-high-energy-physics-using-apache-spark-bigdl)    
   - [Distributed Deep Learning for Physics with TensorFlow and Kubernetes](https://db-blog.web.cern.ch/blog/luca-canali/2020-03-distributed-deep-learning-physics-tensorflow-and-kubernetes)
 
-## Physics Use Case
-The project focuses on a particle classifier that enhances the accuracy of event selection in high-energy physics. 
+## Physics Use Case and Implementation
+This work is about building a particle classifier that enhances the accuracy of event selection in 
+High Energy Physics.  
 By utilizing neural networks, we can classify different event topologies of interest, thereby improving the state
 of the art in accuracy. This work reproduces the findings of the research article
 [Topology classification with deep learning to improve real-time event selection at the LHC](https://link.springer.com/epdf/10.1007/s41781-019-0028-1?author_access_token=eTrqfrCuFIP2vF4nDLnFfPe4RwlQNchNByi7wbcMAY7NPT1w8XxcX1ECT83E92HWx9dJzh9T9_y5Vfi9oc80ZXe7hp7PAj21GjdEF2hlNWXYAkFiNn--k5gFtNRj6avm0UukUt9M9hAH_j4UR7eR-g%3D%3D)
-and implements it using tools from the Big Data ecosystem, such as Apache Spark and TensorFlow/Keras APIs at scale.
+and implements it using mainstream tools and techniques from open source for ML and Data Engineering
+at scale. We have used tools and frameworks such as Apache Spark and TensorFlow/Keras, Jupyter Notebooks.
+We have deployed the workload on different computing resources at CERN and on Cloud resources,
+including CERN's Hadoop and Spark service clusters and also using GPU resources on Kubernetes.
 
 ![Physics use case for the particle classifier](Docs/Physics_use_case.png)
 
 ## Authors  
 - Authors and contacts: Matteo.Migliorini@cern.ch, Riccardo.Castellotti@cern.ch, Luca.Canali@cern.ch    
-- Original research article, raw data and neural network models by: [T.Q. Nguyen *et al.*, Comput Softw Big Sci (2019) 3: 12](https://link.springer.com/epdf/10.1007/s41781-019-0028-1?author_access_token=eTrqfrCuFIP2vF4nDLnFfPe4RwlQNchNByi7wbcMAY7NPT1w8XxcX1ECT83E92HWx9dJzh9T9_y5Vfi9oc80ZXe7hp7PAj21GjdEF2hlNWXYAkFiNn--k5gFtNRj6avm0UukUt9M9hAH_j4UR7eR-g%3D%3D)   
-- Acknowledgements: Marco Zanetti, Thong Nguyen, Maurizio Pierini, Viktor Khristenko, CERN openlab, 
-members of the Hadoop and Spark service at CERN, CMS Bigdata project,
+- Acknowledgements:
+  - Original research article, raw data and neural network models by: [T.Q. Nguyen *et al.*, Comput Softw Big Sci (2019) 3: 12](https://link.springer.com/epdf/10.1007/s41781-019-0028-1?author_access_token=eTrqfrCuFIP2vF4nDLnFfPe4RwlQNchNByi7wbcMAY7NPT1w8XxcX1ECT83E92HWx9dJzh9T9_y5Vfi9oc80ZXe7hp7PAj21GjdEF2hlNWXYAkFiNn--k5gFtNRj6avm0UukUt9M9hAH_j4UR7eR-g%3D%3D)
+  - Marco Zanetti, Thong Nguyen, Maurizio Pierini, Viktor Khristenko, CERN openlab, 
+  - Members of the Hadoop and Spark service at CERN, CMS Bigdata project,
 Intel team for BigDL and Analytics Zoo consultancy: Jiao (Jennie) Wang and Sajan Govindan.
 
 ## Project Structure
@@ -117,7 +123,7 @@ The provided visualization demonstrates the convergence of the loss function dur
 By achieving results consistent with the original research paper, we validate the effectiveness of our DL models and the reliability of our implementation. These results contribute to advancing the field of high-energy physics and event classification at the LHC (Large Hadron Collider).
 
 For more detailed insights into the experimental setup, methodology, and performance evaluation, please refer to the associated documentation and research article.
-The results of the DL model(s) training are satisfactoy and match the results of the original research paper. 
+The results of the DL model(s) training are satisfactory and match the results of the original research paper. 
 
 
 ## Additional Info and References
